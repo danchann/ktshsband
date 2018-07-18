@@ -7,6 +7,10 @@ const posts = require('./routes/api/posts')
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
 const db = require('./config/keys').mongoURI;
 
 mongoose
